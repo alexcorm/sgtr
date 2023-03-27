@@ -361,6 +361,12 @@ draw_manhattan_track <- function(track,
         if (ymax < 0) { ymax <- 0.976 * ymax } else { ymax <- 1.025 * ymax }
         track$ylim <- c(ymin, ymax)
 
+    } else {
+        
+        ymin <- min(data$Value)
+        if (ymin < 0) { ymin <- 1.025 * ymin } else { ymin <- 0.976 * ymin }
+        ymax <- track$ylim
+      
     }
 
     # Assign labels to chromosomes
