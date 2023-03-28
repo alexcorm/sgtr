@@ -366,6 +366,7 @@ draw_manhattan_track <- function(track,
         ymin <- min(data$Value)
         if (ymin < 0) { ymin <- 1.025 * ymin } else { ymin <- 0.976 * ymin }
         ymax <- track$ylim
+        track$ylim <- c(ymin, ymax)
       
     }
 
